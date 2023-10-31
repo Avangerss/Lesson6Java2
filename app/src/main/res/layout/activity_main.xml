@@ -1,136 +1,191 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="40dp"
     tools:context=".MainActivity">
 
     <ImageView
+        android:id="@+id/iv_menu"
         android:layout_width="32dp"
         android:layout_height="32dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="70dp"
+        android:layout_alignParentStart="true"
+        android:layout_margin="10dp"
         android:src="@drawable/menu" />
 
     <ImageView
-        android:layout_width="32dp"
-        android:layout_height="32dp"
-        android:layout_gravity="end"
-        android:layout_marginTop="70dp"
-        android:layout_marginEnd="40dp"
-        android:src="@drawable/account" />
+        android:id="@+id/prof"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="10dp"
+        android:src="@drawable/acc" />
 
     <TextView
+        android:id="@+id/tv_rac"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_menu"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
         android:text="@string/rentt"
-        android:textStyle="bold"
+        android:textColor="@color/black"
         android:textSize="30sp"
-        android:layout_marginTop="140dp"
-        android:layout_marginStart="40dp" />
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/iv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_rac"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/rectangle_1"
+        android:drawableStart="@drawable/search"
+        android:drawablePadding="20dp"
+        android:hint="@string/search"
+        android:paddingVertical="10dp"
+        android:paddingStart="10dp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/iv_image1"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_below="@+id/iv"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/blue"
+        android:src="@drawable/rec2" />
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/rectangle_1"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="200dp" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/vector__2_"
-        android:layout_marginTop="220dp"
-        android:layout_marginStart="60dp" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/rectangle_2"
-        android:layout_marginTop="280dp"
-        android:layout_marginStart="40dp" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/vector__3_"
-        android:layout_marginTop="340dp"
-        android:layout_marginStart="60dp" />
+        android:id="@+id/dd"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_above="@+id/bogamy1"
+        android:layout_alignStart="@+id/iv_image1"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/vec3" />
 
     <TextView
+        android:id="@+id/bogamy1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/iv_image1"
+        android:layout_alignBottom="@+id/iv_image1"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="16dp"
         android:text="@string/bogamy"
         android:textColor="@color/white"
-        android:textStyle="bold"
-        android:layout_marginTop="360dp"
-        android:layout_marginStart="60dp" />
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/group__1_"
-        android:layout_marginTop="290dp"
-        android:layout_marginStart="220dp" />
+        android:textStyle="bold" />
 
     <ImageView
+        android:id="@+id/iv_bs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/rectangle_3"
-        android:layout_marginTop="448dp"
-        android:layout_marginStart="40dp" />
+        android:layout_alignTop="@+id/iv_image1"
+        android:layout_alignBottom="@+id/iv_image1"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/car1" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/iw_image2"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_below="@+id/iv_image1"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="#FEABD7"
+        android:src="@drawable/rec3" />
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/vector__3_"
-        android:layout_marginTop="497dp"
-        android:layout_marginStart="60dp" />
+        android:id="@+id/str2"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_above="@+id/bogamy2"
+        android:layout_alignStart="@+id/iw_image2"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/vec3" />
 
     <TextView
+        android:id="@+id/bogamy2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/iw_image2"
+        android:layout_alignBottom="@+id/iw_image2"
         android:text="@string/bogamy2"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="16dp"
         android:textColor="@color/white"
-        android:textStyle="bold"
-        android:layout_marginTop="526dp"
-        android:layout_marginStart="60dp" />
+        android:textStyle="bold" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/group__2_"
-        android:layout_marginTop="479dp"
-        android:layout_marginStart="220dp" />
+        android:layout_alignTop="@+id/iw_image2"
+        android:layout_alignBottom="@+id/iw_image2"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/car2" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/iv_car1"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_below="@+id/iw_image2"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="#69D8E8"
+        android:src="@drawable/rec4" />
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/rectangle_4"
-        android:layout_marginTop="614dp"
-        android:layout_marginStart="40dp" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/vector__3_"
-        android:layout_marginTop="664dp"
-        android:layout_marginStart="60dp" />
+        android:id="@+id/str"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_above="@+id/bogamy3"
+        android:layout_alignStart="@+id/iv_car1"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/vec3" />
 
     <TextView
+        android:id="@+id/bogamy3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/iv_car1"
+        android:layout_alignBottom="@+id/iv_car1"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="16dp"
         android:text="@string/bogamy2"
         android:textColor="@color/white"
-        android:textStyle="bold"
-        android:layout_marginTop="693dp"
-        android:layout_marginStart="60dp" />
+        android:textStyle="bold" />
 
     <ImageView
+        android:id="@+id/iv_car2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/group__3_"
-        android:layout_marginTop="646dp"
-        android:layout_marginStart="220dp" />
-    
-</FrameLayout>
+        android:layout_alignTop="@+id/iv_car1"
+        android:layout_alignEnd="@+id/iv_car1"
+        android:layout_alignBottom="@+id/iv_car1"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/car3" />
+
+</RelativeLayout>
